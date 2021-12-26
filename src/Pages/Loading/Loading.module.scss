@@ -1,0 +1,24 @@
+@import "../../SharedStyles/variables";
+
+.Loading {
+  background-color: $clr-white;
+  min-height: 100vh;
+  color: $clr-white;
+  background-image: url("https://www.ourfastcdn.com/elegantgames/2654172s.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  .container {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    .contents {
+      background-color: rgba($clr-black, $dimmed-opacity);
+      border-radius: $card-border-radius;
+      padding: 20px;
+      > div * {
+        background-color: rgba($clr-white, $dimmed-opacity) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "products": {
+    "1": "Kinda Games",
+    "2": "Security Player",
+    "3": "Elegant Games"
+  },
+  "headerData": {
+    "header1": {
+      "1": "Play an unlimited number of times more than 40 games"
+    },
+    "header2": {
+      "1": "Single Partnership."
+    },
+    "startBtn": { "ar": { "1": "ابدء الان" }, "en": { "1": "Start Now" } }
+  },
+  "footerData": {
+    "header1": {
+      "1": "Welcome in"
+    },
+    "header2": {
+      "1": "Follow us"
+    },
+    "paragraph1": {
+      "1": "40+ games are waiting for you. Sign up and start playing now... new games and new challenges every day."
+    },
+    "copyright": {
+      "1": "all rights are save"
+    },
+    "internalLinks": {
+      "link0": { "1": "Home" },
+      "link1": { "1": "Games" },
+      "link2": { "1": "Privacy" },
+      "link3": { "1": "Terms" }
+    }
+  },
+  "termsData": {
+    "header1": {
+      "1": "Welcome in"
+    },
+    "list1": {
+      "item0": {
+        "1": "By clicking on the subscribe button above, you agree to the terms and conditions below."
+      },
+      "item1": {
+        "1": "The paid subscription will start automatically after sending the coffee code."
+      },
+      "item2": {
+        "1": "No obligation, you can cancel your subscription at any time by sending [unsub elegant] for Vodafone customers to 6699, for Etisalat customers to 1722, for Orange customers to 5030 and for WE customers to 4041."
+      },
+      "item3": {
+        "1": "For support, contact us at support@elegant.games."
+      },
+      "item4": {
+        "1": "The trial period is valid for new customers only."
+      }
+    }
+  },
+  "privacyData": {
+    "header1": {
+      "1": "Welcome in"
+    },
+    "list1": {
+      "item0": {
+        "1": "At ElegantGames, accessible from Elegant.games, one of our main priorities is the privacy of our visitors. This privacy policy document contains types of information that are collected and recorded by ElegantGames and how we use it. If you have additional questions or need more information About our privacy policy, please feel free to contact us.This privacy policy applies only to our online activities and is valid for visitors to our site regarding information they have shared and/or collected at ElegantGames.This policy does not apply to any information collected offline. or via channels other than this site Consent By using our site, you agree to the Privacy Policy and agree to its terms Information We Collect The personal information you are asked to provide, and the reasons why you are asked to provide it, will be made clear at the point where we ask you to provide your personal information If you contact us Directly, we may receive additional information about you such as your name, email address, phone number, message contents and/or attachments that you may send to us and any other information you may choose to provide."
+      }
+    }
+  }
+}

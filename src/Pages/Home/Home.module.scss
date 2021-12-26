@@ -1,0 +1,9 @@
+@import "../../SharedStyles/variables";
+
+.Home {
+  min-width: 100%;
+  min-height: 100vh;
+  font-family: $font-family;
+  position: relative;
+  padding: 40px 0 20px;
+}

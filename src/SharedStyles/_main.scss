@@ -1,0 +1,26 @@
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+@import "./functions";
+
+body {
+  @include withTheme("background-color", "color-background");
+  @include withTheme("color", "color-text");
+  // @include withTheme("box-shadow", "color-text", "0 0 0 0");
+  font-family: $font-family;
+  font-size: emsToPx(1);
+}
+
+.element {
+  @include withTheme("background-color", "color-elements");
+  @include withTheme("color", "color-text");
+}
+
+.input {
+  @include withTheme("background-color", "color-elements");
+  @include withTheme("color", "color-text");
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,22 @@
+.CountriesList {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  .option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .flag {
+      font-size: 30px;
+      margin-right: 5px;
+    }
+    span {
+      color: black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

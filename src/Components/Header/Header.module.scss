@@ -1,0 +1,299 @@
+@import "../../SharedStyles/variables";
+@import "../../SharedStyles/functions";
+
+.Header {
+  position: fixed;
+  z-index: 1001;
+  width: emsToPx(35);
+  height: emsToPx(35);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $clr-008;
+  color: $clr-white;
+  outline: 20px solid $clr-white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: $clr-007;
+    font-family: $font-pattay;
+    font-size: emsToPx(4);
+    font-weight: 300;
+    margin: emsToPx(1);
+  }
+  h2 {
+    font-size: emsToPx(1.5);
+    margin: 0;
+    font-weight: 300;
+  }
+  .buttonsContainer {
+    display: flex;
+    margin: 15px;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 140px;
+      height: 50px;
+      border-right: 1px dashed $clr-008;
+      font-size: emsToPx(1.35);
+      background-color: $clr-white;
+      color: $clr-008;
+      cursor: pointer;
+      span {
+        color: inherit;
+      }
+      .icon {
+        display: none;
+        font-size: emsToPx(1.35);
+      }
+      &:first-child {
+        border-radius: 30px 0 0 30px;
+      }
+      &:last-child {
+        border-radius: 0 30px 30px 0;
+      }
+      &.notSelected {
+        opacity: 0.5;
+      }
+    }
+    &.ar {
+      button {
+        &:first-child {
+          border-radius: 0 30px 30px 0;
+          border-right: 0;
+        }
+        &:last-child {
+          border-radius: 30px 0 0 30px;
+        }
+      }
+    }
+  }
+  &.hide {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 0;
+    align-items: stretch;
+    h1,
+    h2,
+    .buttonsContainer button .msg {
+      display: none;
+    }
+    .buttonsContainer {
+      margin: 0;
+      flex-grow: 1;
+      padding-top: 50%;
+      button {
+        background-color: transparent;
+        color: $clr-white;
+        &.notSelected {
+          width: 0;
+          height: 0;
+        }
+        &.selected {
+          border: 0;
+          border-radius: 0;
+          width: auto;
+          height: auto;
+          flex-grow: 1;
+          .icon {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  &.shrink {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 0;
+    align-items: stretch;
+    animation-name: shrink;
+    animation-timing-function: ease-out;
+    animation-duration: 1000ms;
+    h1,
+    h2,
+    .buttonsContainer button .msg {
+      display: none;
+    }
+    .buttonsContainer {
+      margin: 0;
+      flex-grow: 1;
+      padding-top: 50%;
+      button {
+        background-color: transparent;
+        color: $clr-white;
+        &.notSelected {
+          width: 0;
+          height: 0;
+        }
+        &.selected {
+          border: 0;
+          border-radius: 0;
+          width: auto;
+          height: auto;
+          flex-grow: 1;
+          .icon {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  &.grow {
+    animation-name: grow;
+    animation-timing-function: ease-out;
+    animation-duration: 600ms;
+    h1,
+    h2,
+    .buttonsContainer button .msg {
+      animation-name: fadeIn95;
+      animation-timing-function: ease-out;
+      animation-duration: 600ms;
+    }
+    .buttonsContainer {
+      animation-name: paddingIn20;
+      animation-timing-function: ease-out;
+      animation-duration: 600ms;
+      button {
+        animation-name: bgColorIn20;
+        animation-timing-function: ease-out;
+        animation-duration: 1000ms;
+      }
+    }
+  }
+
+  @media screen and(max-width: 640px) {
+    width: emsToPx(18);
+    height: emsToPx(18);
+    outline-width: 10px;
+    h1 {
+      font-size: emsToPx(2);
+      margin: emsToPx(0.5);
+    }
+    h2 {
+      font-size: emsToPx(0.75);
+    }
+    .buttonsContainer {
+      margin: 8px;
+      button {
+        width: 70px;
+        height: 25px;
+        font-size: emsToPx(0.7);
+      }
+    }
+
+    &.shrink {
+      animation-name: shrinkSmall;
+    }
+    &.grow {
+      animation-name: growSmall;
+    }
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: emsToPx(35);
+    height: emsToPx(35);
+    top: 50%;
+  }
+  30% {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 30%;
+  }
+  100% {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 0;
+  }
+}
+@keyframes shrinkSmall {
+  0% {
+    width: emsToPx(18);
+    height: emsToPx(18);
+    top: 50%;
+  }
+  30% {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 30%;
+  }
+  100% {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 0;
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 0;
+  }
+  100% {
+    width: emsToPx(35);
+    height: emsToPx(35);
+    top: 50%;
+  }
+}
+
+@keyframes growSmall {
+  0% {
+    width: emsToPx(6);
+    height: emsToPx(6);
+    top: 0;
+  }
+  100% {
+    width: emsToPx(18);
+    height: emsToPx(18);
+    top: 50%;
+  }
+}
+
+@keyframes fadeIn95 {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes paddingIn20 {
+  0% {
+    padding-top: 50%;
+  }
+  20% {
+    padding-top: 50%;
+  }
+  100% {
+    padding-top: 0%;
+  }
+}
+
+@keyframes bgColorIn20 {
+  0% {
+    background-color: transparent;
+    color: $clr-white;
+  }
+  20% {
+    background-color: transparent;
+    color: $clr-white;
+  }
+  100% {
+    background-color: $clr-white;
+    color: $clr-008;
+  }
+}

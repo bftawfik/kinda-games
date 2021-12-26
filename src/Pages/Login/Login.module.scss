@@ -1,0 +1,44 @@
+@import "../../SharedStyles/variables";
+@import "../../SharedStyles/functions";
+
+.Login {
+  background-color: $clr-white;
+  min-height: 100vh;
+  color: $clr-white;
+  background-image: url("https://www.ourfastcdn.com/elegantgames/2654172s.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  .container {
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    .contents {
+      margin-top: emsToPx(5);
+      background: #027cbf80 linear-gradient(45deg, #{$clr-black}, transparent);
+      border-radius: 10px;
+      max-width: emsToPx(55);
+      padding: 50px 30px;
+      h2 {
+        font-size: emsToPx(2.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span {
+          margin-bottom: 5px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          a {
+            color: inherit;
+            margin-top: 20px;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

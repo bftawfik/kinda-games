@@ -1,0 +1,16 @@
+@import "./variables";
+
+$themes: (
+  light: (
+    color-background: $clr-very-light-gray,
+    color-text: $clr-very-dark-blue-2,
+    color-elements: $clr-white,
+    color-input: $clr-dark-gray,
+  ),
+  dark: (
+    color-background: $clr-very-dark-blue,
+    color-text: $clr-white,
+    color-elements: $clr-dark-blue,
+    color-input: $clr-dark-gray,
+  ),
+);
