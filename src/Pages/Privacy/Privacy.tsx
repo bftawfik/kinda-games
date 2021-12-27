@@ -11,8 +11,7 @@ import type { typeAppProviderValue } from "../../Types";
 import classes from "./Privacy.module.scss";
 
 const Privacy = () => {
-  const { t, i18n } = useTranslation();
-  const en = i18n.getFixedT("en");
+  const { t } = useTranslation();
   const { productId } = defaults;
   const { privacyData }: typeAppProviderValue = useContext(AppDataContext);
   return (
@@ -21,7 +20,7 @@ const Privacy = () => {
       containerClassName={classes.container}
     >
       <div className={classes.contents}>
-        <h2>{`${t("privacyData.header1.1")} ${en(
+        <h2>{`${t("privacyData.header1.1")} ${t(
           `products.${productId}`
         )}`}</h2>
         {privacyData &&

@@ -11,8 +11,7 @@ import { defaults } from "../../Mocks";
 import classes from "./Terms.module.scss";
 
 const Terms = () => {
-  const { t, i18n } = useTranslation();
-  const en = i18n.getFixedT("en");
+  const { t } = useTranslation();
   const { productId } = defaults;
 
   const { termsData }: typeAppProviderValue = useContext(AppDataContext);
@@ -22,7 +21,7 @@ const Terms = () => {
       containerClassName={classes.container}
     >
       <div className={classes.contents}>
-        <h2>{`${t("termsData.header1.1")} ${en(`products.${productId}`)}`}</h2>
+        <h2>{`${t("termsData.header1.1")} ${t(`products.${productId}`)}`}</h2>
         <ul>
           {termsData &&
             termsData.map((termId, ndx) => (
