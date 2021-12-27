@@ -11,9 +11,9 @@ const GamesGrid = ({ card: Card }: typeGamesGrid) => {
   return (
     <div className={classes.GamesGrid}>
       {gamesData &&
-        gamesData.map((gameId, ndx) => (
-          <Card key={ndx} gameId={gameId} />
-        ))}
+        Object.entries(gamesData).map(([gameId, gameName], ndx) => {
+          return <Card key={ndx} gameId={gameId} gameName={gameName} />;
+        })}
     </div>
   );
 };

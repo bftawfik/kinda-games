@@ -52,13 +52,14 @@ type typeFulscrnWrpr = {
 
 type typeSingleGameData = {
   gameId?: string;
+  gameName?: string;
 };
 
 type typeGameListData = typeSingleGameData[];
 
 type typeTermsData = string[];
 
-type typeGamesData = string[];
+type typeGamesData = { [key: string]: string };
 
 type typeGamesGrid = {
   card: any;
