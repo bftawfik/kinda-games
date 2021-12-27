@@ -14,16 +14,61 @@
     justify-content: center;
     flex-grow: 1;
     .contents {
+      display: flex;
       margin-top: emsToPx(5);
       background: #027cbf80 linear-gradient(45deg, black, transparent);
       border-radius: 10px;
       max-width: emsToPx(55);
       padding: 50px 30px;
-      h2 {
-        font-size: emsToPx(2.5);
+      .countriesList {
+        display: flex;
+        flex-shrink: 0;
+        background-color: $clr-white;
+        margin-right: 20px;
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            list-style-type: none;
+            button {
+              font-family: inherit;
+              margin: 1px;
+              background-color: $clr-white;
+              width: 200px;
+              position: relative;
+              height: 40px;
+              border-radius: 3px;
+              border: 0;
+              box-shadow: 0px 0px 5px -2px #666666;
+              &.selected {
+                background-color: $clr-primary;
+                box-shadow: unset;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  top: calc(50% - 3px);
+                  right: 0;
+                  border-left: 10px solid transparent;
+                  border-right: 10px solid transparent;
+                  border-bottom: 7px solid $clr-primary;
+                  transform: rotate(90deg) translate(0, calc(1px - 200%));
+                }
+              }
+            }
+          }
+        }
       }
-      ul {
-        font-size: emsToPx(1.4);
+      .terms {
+        display: flex;
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-direction: column;
+        h2 {
+          font-size: emsToPx(2.5);
+        }
+        ul {
+          font-size: emsToPx(1.4);
+        }
       }
     }
   }
