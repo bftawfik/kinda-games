@@ -79,11 +79,9 @@ const Header = () => {
                     showHeader === headerCases?.HIDE_WITH_ANIMATION
                   ) {
                     navigate("/");
-                    changeShowHeader &&
-                      changeShowHeader(headerCases?.HIDE_WITHOUT_ANIMATION);
                   } else {
                     changeShowHeader &&
-                      changeShowHeader(headerCases?.SHOW_WITH_ANIMATION);
+                      changeShowHeader(headerCases?.HIDE_WITH_ANIMATION);
                   }
                 }
               }}
