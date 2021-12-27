@@ -18,13 +18,16 @@
       align-self: flex-start;
       width: 100%;
       margin: 0;
+      color: $clr-black;
     }
     .contents {
       display: flex;
       background-color: $clr-white;
-      width: 100%;
+      width: calc(100% - 40px);
       box-shadow: 0px 0px 5px -2px #666666;
       border-radius: 2px;
+      margin: 20px;
+      box-sizing: border-box;
       .terms {
         display: flex;
         flex-shrink: 1;
@@ -43,7 +46,6 @@
           padding: 0;
           li {
             list-style-type: none;
-           
           }
         }
       }
@@ -59,7 +61,6 @@
             list-style-type: none;
             button {
               font-family: inherit;
-              margin: 1px;
               background-color: $clr-white;
               width: 200px;
               position: relative;
