@@ -16,6 +16,7 @@ const Terms = () => {
   const [usedCountriesData, setUsedCountriesData] = useState<
     typeAllCountriesData | undefined
   >([]);
+  const [selectedCountry, setSelectedCountry] = useState(0);
 
   const {
     termsData,
@@ -36,25 +37,38 @@ const Terms = () => {
       className={classes.Terms}
       containerClassName={classes.container}
     >
+      <h2>{`${t("termsData.header1.1")} ${t(`products.${productId}`)}`}</h2>
       <div className={classes.contents}>
+        <div className={classes.terms}>
+          <h2>
+            {usedCountriesData && usedCountriesData[selectedCountry]?.name}
+          </h2>
+          <ul>
+            {termsData &&
+              termsData.map((termId, ndx) => (
+                <li key={ndx}>
+                  {t(`termsData.list${selectedCountry}.item${ndx}.${termId}`)}
+                </li>
+              ))}
+          </ul>
+        </div>
         <div className={classes.countriesList}>
           <ul>
             {usedCountriesData?.map((singleCountry, ndx) => (
               <li>
-                <button className={ndx === 1 ? classes.selected : undefined}>
+                <button
+                  className={
+                    ndx === selectedCountry ? classes.selected : undefined
+                  }
+                  onClick={() => {                   
+                    setSelectedCountry(ndx);
+                  }}
+                  disabled={ndx === selectedCountry}
+                >
                   {singleCountry.name}
                 </button>
               </li>
             ))}
-          </ul>
-        </div>
-        <div className={classes.terms}>
-          <h2>{`${t("termsData.header1.1")} ${t(`products.${productId}`)}`}</h2>
-          <ul>
-            {termsData &&
-              termsData.map((termId, ndx) => (
-                <li key={ndx}>{t(`termsData.list1.item${ndx}.${termId}`)}</li>
-              ))}
           </ul>
         </div>
       </div>

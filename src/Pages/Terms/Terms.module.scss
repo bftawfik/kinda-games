@@ -5,7 +5,6 @@
   background-color: $clr-white;
   min-height: 100vh;
   color: $clr-white;
-  background-image: url("https://www.ourfastcdn.com/elegantgames/2654172s.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -13,18 +12,46 @@
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    padding: 20px;
+    h2 {
+      font-size: 24px;
+      align-self: flex-start;
+      width: 100%;
+      margin: 0;
+    }
     .contents {
       display: flex;
-      margin-top: emsToPx(5);
-      background: #027cbf80 linear-gradient(45deg, black, transparent);
-      border-radius: 10px;
-      max-width: emsToPx(55);
-      padding: 50px 30px;
+      background-color: $clr-white;
+      width: 100%;
+      box-shadow: 0px 0px 5px -2px #666666;
+      border-radius: 2px;
+      .terms {
+        display: flex;
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-direction: column;
+        color: $clr-black;
+        padding: 20px 40px 20px 20px;
+        box-shadow: 0px 0px 5px -2px #666666;
+        h2 {
+          font-size: 24px;
+          align-self: flex-start;
+          width: 100%;
+        }
+        ul {
+          font-size: 16px;
+          padding: 0;
+          li {
+            list-style-type: none;
+           
+          }
+        }
+      }
       .countriesList {
         display: flex;
         flex-shrink: 0;
         background-color: $clr-white;
-        margin-right: 20px;
+        box-shadow: 0px 0px 5px -2px #666666;
         ul {
           margin: 0;
           padding: 0;
@@ -40,34 +67,24 @@
               border-radius: 3px;
               border: 0;
               box-shadow: 0px 0px 5px -2px #666666;
+              cursor: pointer;
               &.selected {
                 background-color: $clr-primary;
+                color: $clr-white;
                 box-shadow: unset;
                 &:after {
                   content: "";
                   position: absolute;
                   top: calc(50% - 3px);
-                  right: 0;
+                  left: 0;
                   border-left: 10px solid transparent;
                   border-right: 10px solid transparent;
                   border-bottom: 7px solid $clr-primary;
-                  transform: rotate(90deg) translate(0, calc(1px - 200%));
+                  transform: rotate(-90deg) translate(0, calc(1px - 200%));
                 }
               }
             }
           }
-        }
-      }
-      .terms {
-        display: flex;
-        flex-shrink: 1;
-        flex-grow: 1;
-        flex-direction: column;
-        h2 {
-          font-size: emsToPx(2.5);
-        }
-        ul {
-          font-size: emsToPx(1.4);
         }
       }
     }
