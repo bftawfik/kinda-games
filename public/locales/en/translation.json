@@ -39,19 +39,36 @@
     },
     "list1": {
       "item0": {
-        "1": "By clicking on the subscribe button above, you agree to the terms and conditions below."
+        "1": "a. By clicking on the subscribed button mentioned, you agree to the terms and conditions below"
       },
       "item1": {
-        "1": "The paid subscription will start automatically after sending the coffee code."
+        "1": "B. The paid subscription will start automatically after the free period."
       },
       "item2": {
-        "1": "No obligation, you can cancel your subscription at any time by sending [unsub elegant] for Vodafone customers to 6699, for Etisalat customers to 1722, for Orange customers to 5030 and for WE customers to 4041."
+        "1": "C. No obligation, you can cancel your subscription at any time by sending [unsub KG] to 1151."
       },
       "item3": {
-        "1": "For support, contact us at support@elegant.games."
+        "1": "D. For support, contact us at support@kinda.games."
       },
       "item4": {
-        "1": "The trial period is valid for new customers only."
+        "1": "e. The trial period is valid for new customers only."
+      }
+    },
+    "list2": {
+      "item0": {
+        "1": "a. By clicking on the subscribed button mentioned, you agree to the terms and conditions below"
+      },
+      "item1": {
+        "1": "B. The paid subscription will start automatically after the free period."
+      },
+      "item2": {
+        "1": "C. No obligation, you can cancel your subscription at any time by sending [unsub KG] to 1151."
+      },
+      "item3": {
+        "1": "D. For support, contact us at support@kinda.games."
+      },
+      "item4": {
+        "1": "e. The trial period is valid for new customers only."
       }
     }
   },
