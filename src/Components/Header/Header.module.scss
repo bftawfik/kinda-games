@@ -28,6 +28,7 @@
     font-size: emsToPx(1.5);
     margin: 0;
     font-weight: 300;
+    text-align: center;
   }
   .buttonsContainer {
     display: flex;
@@ -58,6 +59,7 @@
       }
       &:last-child {
         border-radius: 0 30px 30px 0;
+        border-right: 0;
       }
       &.notSelected {
         opacity: 0.5;
@@ -71,6 +73,7 @@
         }
         &:last-child {
           border-radius: 30px 0 0 30px;
+          border-right: 1px dashed $clr-008;
         }
       }
     }
