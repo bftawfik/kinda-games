@@ -13,5 +13,11 @@ const internalLinks: typeInternalLinks = [
   {
     url: "/terms",
   },
+  {
+    url: "/affiliates",
+  },
+  {
+    url: "/contact",
+  },
 ];
 export default internalLinks;

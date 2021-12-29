@@ -34,7 +34,7 @@ const Footer = () => {
       ].join(" ")}
       containerClassName={classes.container}
     >
-      <button
+      {/* <button
         className={classes.toggleFooter}
         onClick={() => {
           if (showFooter === undefined) {
@@ -47,25 +47,14 @@ const Footer = () => {
         <span className={classes.icon}>
           <FontAwesomeIcon icon={faInfoCircle} />
         </span>
-      </button>
-      <div className={classes.footerRow}>
+      </button> */}
+      {/* <div className={classes.footerRow}>
         <div className={classes.footerCol}>
           <h3>
             <span>{t("footerData.header1.1")} </span>
             <span>{en(`products.${productId}`)}</span>
           </h3>
           <p>{t("footerData.paragraph1.1")}</p>
-          <ul className={classes.internalLinks}>
-            {internalLinks &&
-              internalLinks.map(({ url }, ndx) => (
-                <li key={ndx}>
-                  <Link to={`${url}?${searchParams?.toString()}`}>
-                    {t(`footerData.internalLinks.link${ndx}.1`)}
-                  </Link>
-                  {ndx + 1 < internalLinks.length && <span>-</span>}
-                </li>
-              ))}
-          </ul>
         </div>
         <div className={classes.footerCol}>
           <h3>{t("footerData.header2.1")}</h3>
@@ -86,11 +75,27 @@ const Footer = () => {
               ))}
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className={classes.footerRow}>
-        <p>{`${en(`products.${productId}`)} © ${t(
-          "footerData.copyright.1"
-        )} 2021`}</p>
+        <div className={classes.footerCol}>
+          <p>
+            <span>{`${t("footerData.copyright.1")} © `}</span>
+            <span className={classes.service}>{t(`products.${productId}`)}</span>{" "}
+            <span>{t("footerData.copyright.2")}</span>
+          </p>
+        </div>
+        <div className={classes.footerCol}>
+          <ul className={classes.internalLinks}>
+            {internalLinks &&
+              internalLinks.map(({ url }, ndx) => (
+                <li key={ndx}>
+                  <Link to={`${url}?${searchParams?.toString()}`}>
+                    {t(`footerData.internalLinks.link${ndx}.1`)}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </FulscrnWrpr>
   );

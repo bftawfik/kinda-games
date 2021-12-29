@@ -28,13 +28,16 @@
       "1": "40+ games are waiting for you. Sign up and start playing now... new games and new challenges every day."
     },
     "copyright": {
-      "1": "all rights are save"
+      "1": "Copyright 2021",
+      "2": "All rights reserved"
     },
     "internalLinks": {
       "link0": { "1": "Home" },
       "link1": { "1": "Games" },
-      "link2": { "1": "Privacy" },
-      "link3": { "1": "Terms" }
+      "link2": { "1": "Terms" },
+      "link3": { "1": "Privacy & Usage" },
+      "link4": { "1": "Affiliates" },
+      "link5": { "1": "Contact us" }
     }
   },
   "termsData": {
