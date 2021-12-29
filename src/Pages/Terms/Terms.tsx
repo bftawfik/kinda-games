@@ -45,7 +45,8 @@ const Terms = () => {
       <div className={classes.contents}>
         <div className={classes.terms}>
           <h2>
-            {usedCountriesData && usedCountriesData[selectedCountry]?.name}
+            {usedCountriesData &&
+              t(`countries.${usedCountriesData[selectedCountry]?.code}`)}
           </h2>
           <ul>
             {termsData &&
@@ -69,7 +70,7 @@ const Terms = () => {
                   }}
                   disabled={ndx === selectedCountry}
                 >
-                  {singleCountry.name}
+                  {t(`countries.${singleCountry?.code}`)}
                 </button>
               </li>
             ))}

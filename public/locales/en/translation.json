@@ -4,6 +4,10 @@
     "2": "Security Player",
     "3": "Elegant Games"
   },
+  "countries":{
+    "EG": "Egypt",
+    "AE": "United Arab Emirates"
+  },
   "headerData": {
     "header1": {
       "1": "Play an unlimited number of times more than 40 games"
