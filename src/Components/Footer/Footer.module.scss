@@ -28,7 +28,7 @@
           font-size: 14px;
           flex-grow: 1;
           .service {
-            color: #ffb320;
+            color: $clr-010;
             margin: 0 3px;
           }
         }
@@ -58,7 +58,7 @@
         }
       }
       &:last-child {
-        background-color: #252525;
+        background-color: $clr-011;
       }
     }
   }
