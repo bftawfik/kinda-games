@@ -4,8 +4,7 @@
 .Privacy {
   background-color: $clr-white;
   min-height: 100vh;
-  color: $clr-white;
-  background-image: url("https://www.ourfastcdn.com/elegantgames/2654172s.jpg");
+  color: $clr-black;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -15,15 +14,13 @@
     flex-grow: 1;
     .contents {
       margin-top: emsToPx(5);
-      background: #027cbf80 linear-gradient(45deg, black, transparent);
       border-radius: 10px;
-      max-width: emsToPx(55);
       padding: 50px 30px;
       h2 {
-        font-size: emsToPx(2.5);
+        font-size: 24px;
       }
       p {
-        font-size: emsToPx(1.25);
+        font-size: 16px;
       }
     }
   }
