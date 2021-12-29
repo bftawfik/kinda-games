@@ -1,0 +1,20 @@
+@import "../../SharedStyles/variables";
+
+.DataBox {
+  display: flex;
+  flex-direction: column;
+  background-color: $clr-011;
+  border: 1px solid $clr-012;
+  padding: 40px 30px 7px;
+  width: calc(100% / 3);
+  .title {
+    font-size: 24px;
+    font-weight: 400;
+    color: $clr-white;
+    margin-bottom: 40px;
+  }
+  .dataContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

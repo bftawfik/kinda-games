@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { AppDataContext } from "../AppDataProvider/AppDataProvider";
 
 import FulscrnWrpr from "../FulscrnWrpr/FulscrnWrpr";
+import DataBox from "../DataBox/DataBox";
 
 import { defaults } from "../../Mocks";
 
@@ -77,10 +78,18 @@ const Footer = () => {
         </div>
       </div> */}
       <div className={classes.footerRow}>
+        <DataBox title="Most Played Games" />
+        <DataBox title="Latest Comments">
+          <div>hello</div>
+        </DataBox>
+      </div>
+      <div className={classes.footerRow}>
         <div className={classes.footerCol}>
           <p>
             <span>{`${t("footerData.copyright.1")} © `}</span>
-            <span className={classes.service}>{t(`products.${productId}`)}</span>{" "}
+            <span className={classes.service}>
+              {t(`products.${productId}`)}
+            </span>{" "}
             <span>{t("footerData.copyright.2")}</span>
           </p>
         </div>
