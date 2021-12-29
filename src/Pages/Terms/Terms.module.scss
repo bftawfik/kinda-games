@@ -90,4 +90,23 @@
       }
     }
   }
+  &.ar {
+    .container {
+      .contents {
+        .countriesList {
+          ul {
+            li {
+              button {
+                &:after {
+                  left: unset;
+                  right: 0;
+                  transform: rotate(90deg) translate(0, calc(1px - 200%));
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

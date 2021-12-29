@@ -22,6 +22,7 @@ const Terms = () => {
     termsData,
     allCountriesData,
     usedCountriesCodes,
+    language,
   }: typeAppProviderValue = useContext(AppDataContext);
 
   useEffect(() => {
@@ -34,7 +35,10 @@ const Terms = () => {
 
   return (
     <FulscrnWrpr
-      className={classes.Terms}
+      className={[
+        classes.Terms,
+        language === "ar" ? classes.ar : undefined,
+      ].join(" ")}
       containerClassName={classes.container}
     >
       <h2>{`${t("termsData.header1.1")} ${t(`products.${productId}`)}`}</h2>
@@ -60,7 +64,7 @@ const Terms = () => {
                   className={
                     ndx === selectedCountry ? classes.selected : undefined
                   }
-                  onClick={() => {                   
+                  onClick={() => {
                     setSelectedCountry(ndx);
                   }}
                   disabled={ndx === selectedCountry}
